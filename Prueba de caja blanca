@@ -1,1 +1,23 @@
+/**
+ * PRUEBAS DE CAJA BLANCA - LoginForm.jsx
+ * Analiza rutas, condiciones y flujos lógicos internos del componente.
+ */
+
+// 1. Validación de campos vacíos
+function validarCampos(correo, password) {
+  if (!correo && !password) {
+    return "Ingresa tu correo y contraseña.";
+  } else if (!correo) {
+    return "Completa tu correo electrónico.";
+  } else if (!password) {
+    return "Completa tu contraseña.";
+  } else {
+    return "Inicio de sesión exitoso.";
+  }
+}
+// Casos de prueba internos (Caja Blanca)
+console.log("Prueba 1:", validarCampos("", "")); // Esperado: mensaje de ambos vacíos
+console.log("Prueba 2:", validarCampos("tecnico@app.com", "")); // Esperado: falta contraseña
+console.log("Prueba 3:", validarCampos("", "12345")); // Esperado: falta correo
+console.log("Prueba 4:", validarCampos("usuario@app.com", "12345")); // Esperado: éxito
 
