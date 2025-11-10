@@ -15,9 +15,9 @@ function validarCampos(correo, password) {
     return "Inicio de sesión exitoso.";
   }
 }
-// Casos de prueba internos (Caja Blanca)
-console.log("Prueba 1:", validarCampos("", "")); // Esperado: mensaje de ambos vacíos
-console.log("Prueba 2:", validarCampos("tecnico@app.com", "")); // Esperado: falta contraseña
-console.log("Prueba 3:", validarCampos("", "12345")); // Esperado: falta correo
-console.log("Prueba 4:", validarCampos("usuario@app.com", "12345")); // Esperado: éxito
+
+console.log("Prueba 1:", validarCampos("", ""));
+console.log("Prueba 2:", validarCampos("tecnico@app.com", "")); 
+console.log("Prueba 3:", validarCampos("", "12345"));
+console.log("Prueba 4:", validarCampos("usuario@app.com", "12345"));
 
